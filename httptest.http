@@ -1,0 +1,18 @@
+@protocol=http
+@postnumber=100-0005,jp
+@appid=<自分のAPIキー>
+
+### POSTの場合
+POST http://api.openweathermap.org/data/2.5/weather?zip=100-0005,jp&units=metric&lang=ja&APPID=<自分のAPIキー> HTTP/1.1
+Content-Type:application/json
+### 
+
+### GETの場合
+GET http://api.openweathermap.org/data/2.5/weather?zip=100-0005,jp&units=metric&lang=ja&APPID=<自分のAPIキー> HTTP/1.1
+Content-Type:application/json
+### 
+
+### 変数を使う場合
+GET {{protocol}}://api.openweathermap.org/data/2.5/weather?zip={{postnumber}}&units=metric&lang=ja&APPID={{appid}} HTTP/1.1
+Content-Type:application/json
+### 
